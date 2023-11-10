@@ -1,5 +1,5 @@
 {
-  "name": "d4-ui",
+  "name": "@dedaldinodev4/d4-ui",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -17,7 +17,8 @@
     "test-watch": "vitest",
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "Dedaldino Daniel",
@@ -64,5 +65,16 @@
       "npm run lint",
       "npm run test"
     ]
-  }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@dedaldinodev4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dedaldinodev4/d4-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dedaldinodev4/d4-ui/issues"
+  },
+  "homepage": "https://github.com/dedaldinodev4/d4-ui.git"
 }
