@@ -1,7 +1,8 @@
 import { MouseEventHandler } from "react";
 export type ButtonProps = {
   text?: string;
-  primary?: boolean;
+  color?: "primary" | "info" | "warning" | "danger" | "success" | "secondary";
+  outline?: boolean;
   disabled?: boolean;
   size?: "small" | "medium" | "large";
   onClick?: MouseEventHandler<HTMLButtonElement>;

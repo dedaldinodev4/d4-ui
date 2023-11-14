@@ -1,48 +1,46 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Input from "../input";
+import Example from "./Example";
 
-const meta: Meta<typeof Input> = {
-  component: Input,
-  title: "Marbella/InputField",
+const meta: Meta<typeof Example> = {
+  title: "InputField",
   argTypes: {},
+  component: Example,
 };
 export default meta;
 
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof Example>;
 
-export const Primary: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
-);
-Primary.args = {
-  error: false,
-  disabled: false,
-  label: "Primary",
+export const Primary: Story = {
+  args: {
+    error: false,
+    disabled: false,
+    label: "FirstName",
+    placeholder: "Your firstName"
+  }
 };
 
-export const Success: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
-);
-Success.args = {
-  error: false,
-  success: true,
-  disabled: false,
-  label: "Success",
+export const Success: Story = {
+  args: {
+    error: false,
+    success: true,
+    disabled: false,
+    label: "FirstName",
+    placeholder: "Dedaldino",
+  }
 };
 
-export const Error: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
-);
-Error.args = {
-  error: true,
-  disabled: false,
-  message: "Error",
-};
+export const Error: Story = {
+  args: {
+    error: true,
+    disabled: false,
+    message: "Please fill out this field.",
+  }
+}
 
-export const Disabled: Story = (args) => (
-  <Input data-testId="InputField-id" {...args} />
-);
-Disabled.args = {
-  disabled: true,
-  label: "Disabled",
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    label: "FirstName",
+    placeholder: "Dedaldino"
+  }
 };

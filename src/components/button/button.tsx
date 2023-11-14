@@ -4,8 +4,9 @@ import { StyledButton } from "./styles";
 
 const Button: React.FC<ButtonProps> = ({
   size,
-  primary,
+  color,
   disabled,
+  outline,
   text,
   onClick,
   ...props
@@ -14,9 +15,10 @@ const Button: React.FC<ButtonProps> = ({
     <StyledButton
       type="button"
       onClick={onClick}
-      primary={primary}
+      color={color}
       disabled={disabled}
       size={size}
+      outline={outline}
       {...props}
     >
       {text}

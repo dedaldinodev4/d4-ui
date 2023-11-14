@@ -1,7 +1,7 @@
 import { Canvas, Meta } from "@storybook/blocks";
 import Example from "./Example.tsx";
 import * as Button from "./Button.stories.tsx";
-
+ 
 <Meta of={Button} title="Button" />
 
 # Button
@@ -21,9 +21,8 @@ const Example = () => {
   return (
       <Button
         size={"small"}
-        text={"Button"}
+        text={"Button"} 
         onClick={()=> console.log("Clicked")}
-        primary
       />
   );
 };

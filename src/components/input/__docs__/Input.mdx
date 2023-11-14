@@ -1,0 +1,39 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Input from "./Input.stories.tsx";
+ 
+<Meta of={Input} title="Input" />
+
+# InputField
+
+Input component with different props.
+
+#### Example
+
+<Canvas of={Input.Primary} />
+
+## Usage
+
+```ts
+import {Input} from "d4-ui";
+
+const Example = () => {
+  return (
+      <Button
+        label={"Name"}
+        placeholder={"Enter your name"} 
+        onChange={()=> console.log("Changed")}
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **label** _`() => void`_ - A string that represents the text content of the input.
+- **success** - A boolean indicates that it hears success in the value inserted in the input.
+- **disabled** - A boolean indicating whether the input should be disabled or not. When disabled, the button cannot be interacted with.
+- **error** - A boolean with error indicates that there is an error in the value entered in the input.
+- **onChange** - A function that is called when the input value is changed.
