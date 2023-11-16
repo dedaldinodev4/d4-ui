@@ -2,9 +2,9 @@ import { Meta, StoryObj } from "@storybook/react";
 import Example from "./Example";
 
 const meta: Meta<typeof Example> = {
-  title: "InputField",
+  title: "Components/Data Entry/InputField",
   argTypes: {},
-  component: Example,
+  component: Example, 
 };
 export default meta;
 

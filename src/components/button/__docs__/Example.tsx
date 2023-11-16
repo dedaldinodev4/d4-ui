@@ -4,10 +4,12 @@ import { ButtonProps } from "../types";
 
 const Example: FC<ButtonProps> = ({
   disabled = false,
+  rounded = false,
   onClick = () => {},
   color = "primary",
-  size = "small",
-  text = "Button",
+  variant = "solid",
+  size = "sm",
+  text = "Button", 
 }) => {
   return (
     <div
@@ -18,10 +20,12 @@ const Example: FC<ButtonProps> = ({
         height: "100%",
       }}
     >
-      <Button
+      <Button 
+        variant={variant}
         size={size}
         text={text}
         disabled={disabled}
+        rounded={rounded} 
         color={color}
         onClick={onClick}
       />

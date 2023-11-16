@@ -2,67 +2,128 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Example from "./Example";
 
 const meta: Meta<typeof Example> = {
-  title: "Button", 
+  title: "Components/Geral/Button",
   component: Example,
+  argTypes: {
+    variant: {
+      control: {
+        type: "radio", 
+        options: ["solid", "outlined", "ghost", "link"],
+      },
+    },
+    size: {
+      control: { type: "radio", options: ["xs", "sm", "md", "lg"] },
+    },
+    color: {
+      control: {
+        type: "radio",
+        options: [
+          "primary",
+          "secondary",
+          "success",
+          "info",
+          "warning",
+          "danger", 
+        ],
+      },
+    },
+  },
 };
 
-export default meta;
+export default meta; 
 
 type Story = StoryObj<typeof Example>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     text: "Button",
     color: "primary",
     disabled: false,
-    size: "small",
+    variant: "solid",
+    size: "sm",
     onClick: () => console.log("Button"),
   },
 };
-export const Secondary: Story = {
+
+export const Outlined: Story = {
+  args: {
+    text: "Button",
+    color: "primary",
+    variant: "outlined",
+    disabled: false,
+    rounded: false,
+    size: "sm",
+    onClick: () => console.log("Button"),
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    text: "Button",
+    color: "primary", 
+    variant: "ghost",
+    disabled: false, 
+    rounded: false,
+    size: "sm",
+    onClick: () => console.log("Button"),
+  }, 
+};
+
+/*export const Secondary: Story = {
   args: {
     text: "Button",
     color: "secondary",
+    variant: "solid",
     disabled: false,
-    size: "small",
+    rounded: false,
+    size: "sm",
     onClick: () => console.log("Button"),
   },
 };
 
 export const Success: Story = {
-  args: { 
+  args: {
     text: "Button",
     color: "success",
     disabled: false,
-    size: "small",
+    rounded: false,
+    variant: "solid",
+    size: "sm",
     onClick: () => console.log("Success Button"),
   },
-}
+};
 
 export const Info: Story = {
   args: {
     text: "Button",
     color: "info",
     disabled: false,
-    size: "small",
+    rounded: false,
+    variant: "solid",
+    size: "sm",
     onClick: () => console.log("Info Button"),
   },
-}
+};
 export const Warning: Story = {
   args: {
     text: "Button",
     color: "warning",
     disabled: false,
-    size: "small",
+    rounded: false,
+    variant: "solid",
+    size: "sm",
     onClick: () => console.log("Warning Button"),
   },
-}
+};
 export const Danger: Story = {
   args: {
     text: "Button",
     color: "danger",
     disabled: false,
-    size: "small",
+    rounded: false,
+    variant: "solid",
+    size: "sm",
     onClick: () => console.log("Danger Button"),
   },
-};
+}; 
+*/

@@ -6,7 +6,8 @@ const Button: React.FC<ButtonProps> = ({
   size,
   color,
   disabled,
-  outline,
+  variant,
+  rounded,
   text,
   onClick,
   ...props
@@ -18,7 +19,8 @@ const Button: React.FC<ButtonProps> = ({
       color={color}
       disabled={disabled}
       size={size}
-      outline={outline}
+      variant={variant}
+      rounded={rounded}
       {...props}
     >
       {text}
