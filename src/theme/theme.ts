@@ -32,7 +32,7 @@ export const theme: ITheme = {
   },
   size: {
     button: {
-      xl: "4px 20px 4px",
+      xs: "4px 20px 4px",
       sm: "7px 25px 8px",
       md: "9px 30px 11px",
       lg: "14px 30px 16px"

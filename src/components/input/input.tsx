@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from "react";
+import { FC, Fragment } from "react";
 import { InputProps } from "./types";
 import { StyledInput, StyledLabel, StyledMessage, StyledText } from "./styles";
 
