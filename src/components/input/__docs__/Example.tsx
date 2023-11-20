@@ -4,6 +4,7 @@ import { InputProps } from "../types";
 
 const Example: FC<InputProps> = ({
   id = "input-group",
+  size = "sm",
   disabled = false,
   onChange = () => {},
   ...props
@@ -16,10 +17,11 @@ const Example: FC<InputProps> = ({
         height: "100%",
       }}
     >
-      <Input
+      <Input 
         id={id}
         disabled={disabled}
         onChange={onChange}
+        size={size}
         key={id}
         {...props}
       />

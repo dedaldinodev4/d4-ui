@@ -2,13 +2,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Example from "./Example";
 
 const meta: Meta<typeof Example> = {
-  title: "Components/Geral/Button",
+  title: "Components/Forms/Button",
   component: Example,
   argTypes: {
     variant: {
       control: {
         type: "radio", 
-        options: ["solid", "outlined", "ghost", "link"],
+        options: ["solid", "outlined", "ghost"],
       },
     },
     size: {

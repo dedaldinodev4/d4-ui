@@ -1,7 +1,8 @@
 import { theme } from "../theme";
 
-const { button } = theme.color;
+const { button, input } = theme.color;
 
+//* Buttons *//
 export const getButtonColors = (
   key:
     | "primary"
@@ -14,4 +15,9 @@ export const getButtonColors = (
   return `${button[key]}`;
 };
 
-
+// Inputs
+export const getInputColors = (
+  key: "primary" | "success" | "error" | "disabled" | "hover",
+): string => {
+  return `${input[key]}`;
+};

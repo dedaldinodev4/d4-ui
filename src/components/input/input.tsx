@@ -1,12 +1,13 @@
 import React, { FC, Fragment } from "react";
 import { InputProps } from "./types";
-import { StyledInput, StyledLabel, StyledMessage, StyledText } from './styles'
-
+import { StyledInput, StyledLabel, StyledMessage, StyledText } from "./styles";
 
 const Input: FC<InputProps> = ({
   id,
   disabled,
   label,
+  size,
+  variant, 
   message,
   error,
   success,
@@ -26,10 +27,13 @@ const Input: FC<InputProps> = ({
         type="text"
         onChange={onChange}
         disabled={disabled}
+        size={size}
         error={error}
+        variant={variant}
         success={success}
         placeholder={placeholder}
-        {...props}></StyledInput>
+        {...props}
+      ></StyledInput>
       <StyledMessage>
         <StyledText error={error}>{message}</StyledText>
       </StyledMessage>

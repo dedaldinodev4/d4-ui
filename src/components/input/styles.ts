@@ -1,35 +1,43 @@
 import styled from "styled-components";
 import { InputProps } from "./types";
 import { theme } from "../../theme";
+import { getInputColors } from "../../utils/colors";
+import { getInputFieldSize } from "../../utils/sizes";
 
 const color = theme.color.input;
 
 export const StyledInput = styled.input<InputProps>`
-  height: 40px;
-  width: 300px;
+  height: ${(props) =>
+    props.size !== "lg"
+      ? getInputFieldSize(props.size).height
+      : getInputFieldSize().height};
+  width: ${(props) =>
+    props.size !== "lg"
+      ? getInputFieldSize(props.size).width
+      : getInputFieldSize().width};
   border-radius: 3px;
   outline: none;
   border: ${(props) =>
     props.error
-      ? `solid 2px ${color.error}`
+      ? `solid 2px ${getInputColors("error")}`
       : props.success
-        ? `solid 2px ${color.success}`
+        ? `solid 2px ${getInputColors("success")}`
         : "none"};
   background-color: #fff;
   &:focus {
-    border: solid 2px ${color.hover};
+    border: solid 2px ${getInputColors("hover")};
   }
 
   &:hover {
     border: solid 2px
       ${(props) =>
         props.disabled
-          ? color.hover
+          ? getInputColors("hover")
           : props.error
-            ? "#a9150b"
+            ? getInputColors("error")
             : props.success
-              ? "#067d68"
-              : color.hover};
+              ? getInputColors("success")
+              : getInputColors("hover")};
   }
 `;
 
@@ -53,5 +61,9 @@ export const StyledMessage = styled.div<InputProps>`
 export const StyledText = styled.p<InputProps>`
   margin: 0px;
   color: ${(props) =>
-    props.disabled ? "#ffecd1" : props.error ? "#a9150b" : "#080808"};
+    props.disabled
+      ? "#ffecd1"
+      : props.error
+        ? getInputColors("error")
+        : "#080808"};
 `;

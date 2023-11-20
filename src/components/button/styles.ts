@@ -6,7 +6,7 @@ import { getButtonSize } from "../../utils/sizes";
 
 export const StyledButton = styled.button<ButtonProps>`
   border: ${(props) =>
-    props.variant === "outlined"
+    props.variant === "outlined" 
       ? `2px solid ${getButtonColors(props.color)}`
       : props.variant === "ghost"
         ? "none"

@@ -1,5 +1,5 @@
 import { IColorButton, IColorInput } from "./colors";
-import { IButtonSize } from "./sizes";
+import { IButtonSize, IInputFieldSize } from "./sizes";
 
 interface ITheme {
   color: {
@@ -7,7 +7,8 @@ interface ITheme {
     input: IColorInput;
   },
   size: {
-    button: IButtonSize
+    button: IButtonSize,
+    input: IInputFieldSize,
   }
 }
 
@@ -36,5 +37,23 @@ export const theme: ITheme = {
       md: "9px 30px 11px",
       lg: "14px 30px 16px"
     },
+    input: {
+      xs: {
+        width: "100px",
+        height: "20px"
+      },
+      sm: {
+        width: "150px",
+        height: "25px"
+      },
+      md: {
+        width: "200px",
+        height: "30px"
+      },
+      lg: {
+        width: "300px",
+        height: "40px"
+      },
+    }
   }
 }
