@@ -19,17 +19,17 @@ export const StyledInput = styled.input<InputProps>`
   outline: none;
   border: ${(props) =>
     props.error
-      ? `solid 2px ${getInputColors("error")}`
+      ? `solid 1.5px ${getInputColors("error")}`
       : props.success
-        ? `solid 2px ${getInputColors("success")}`
+        ? `solid 1.5px ${getInputColors("success")}`
         : "none"};
   background-color: #fff;
   &:focus {
-    border: solid 2px ${getInputColors("hover")};
+    border: solid 1.5px ${getInputColors("hover")};
   }
 
   &:hover {
-    border: solid 2px
+    border: solid 1.5px
       ${(props) =>
         props.disabled
           ? getInputColors("hover")
