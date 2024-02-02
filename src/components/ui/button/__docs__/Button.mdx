@@ -15,7 +15,7 @@ Button component with different props.
 ## Usage
 
 ```ts
-import {Button} from "d4-ui";
+import { Button } from "d4-ui/ui";
 
 const Example = () => {
   return ( 
@@ -24,6 +24,7 @@ const Example = () => {
         size={"sm"}
         text={"Button"} 
         rounded={true}
+        fullWidth={false}
         onClick={()=> console.log("Clicked")}
       />
   );
@@ -38,4 +39,5 @@ export default Example;
 - **primary** - A boolean indicating whether the button should have a primary styling or not. Typically, a primary button stands out as the main action in a user interface.
 - **disabled** - A boolean indicating whether the button should be disabled or not. When disabled, the button cannot be clicked or interacted with.
 - **size** - A string with one of three possible values: "small," "medium," or "large." It defines the size or dimensions of the button.
+- **fullWidth** - A boolean indicating full width button.
 - **onClick** - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the click event on the button element.

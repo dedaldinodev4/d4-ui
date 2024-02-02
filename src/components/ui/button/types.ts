@@ -6,5 +6,6 @@ export type ButtonProps = {
   rounded?: boolean;
   disabled?: boolean;
   size?: "xs" | "sm" | "md" | "lg";
+  fullWidth?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };

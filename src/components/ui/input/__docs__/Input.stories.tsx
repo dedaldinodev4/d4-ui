@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Example from "./Example";
 
 const meta: Meta<typeof Example> = {
-  title: "Components/Forms/Input",
+  title: "Components/UI/Forms/Input",
   argTypes: {
     variant: {
       control: {

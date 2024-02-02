@@ -9,6 +9,7 @@ const Button: React.FC<ButtonProps> = ({
   variant,
   rounded,
   text,
+  fullWidth,
   onClick,
   ...props
 }) => {
@@ -21,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
       size={size}
       variant={variant}
       rounded={rounded}
+      fullWidth={fullWidth}
       {...props}
     >
       {text}
