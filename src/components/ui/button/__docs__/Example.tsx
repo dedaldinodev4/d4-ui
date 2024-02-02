@@ -10,6 +10,7 @@ const Example: FC<ButtonProps> = ({
   variant = "solid",
   size = "sm",
   text = "Button", 
+  fullWidth=false,
 }) => {
   return (
     <div
@@ -28,9 +29,11 @@ const Example: FC<ButtonProps> = ({
         rounded={rounded} 
         color={color}
         onClick={onClick}
+        fullWidth={fullWidth}
       />
     </div>
   );
 };
 
 export default Example;
+ 

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Example from "./Example";
 
 const meta: Meta<typeof Example> = {
-  title: "Components/Forms/Button",
+  title: "Components/UI/Button",
   component: Example,
   argTypes: {
     variant: {
@@ -39,6 +39,7 @@ export const Default: Story = {
     text: "Button",
     color: "primary",
     disabled: false,
+    fullWidth: false,
     variant: "solid",
     size: "sm",
     onClick: () => console.log("Button"),
@@ -51,6 +52,7 @@ export const Outlined: Story = {
     color: "primary",
     variant: "outlined",
     disabled: false,
+    fullWidth: false,
     rounded: false,
     size: "sm",
     onClick: () => console.log("Button"),
@@ -63,6 +65,7 @@ export const Ghost: Story = {
     color: "primary", 
     variant: "ghost",
     disabled: false, 
+    fullWidth: false,
     rounded: false,
     size: "sm",
     onClick: () => console.log("Button"),

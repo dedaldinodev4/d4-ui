@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { InputProps } from "./types";
-import { theme } from "../../theme";
-import { getInputColors } from "../../utils/colors";
-import { getInputFieldSize } from "../../utils/sizes";
+import { theme } from "../../../theme";
+import { getInputColors } from "../../../utils/colors";
+import { getInputFieldSize } from "../../../utils/sizes";
 
 const color = theme.color.input;
 

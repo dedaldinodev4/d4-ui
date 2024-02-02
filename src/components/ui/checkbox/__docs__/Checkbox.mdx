@@ -1,0 +1,37 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Checkbox from "./Checkbox.stories.tsx";
+ 
+<Meta of={Checkbox} title="Checkbox" />
+
+# Checkbox
+
+Checkbox component with different props.
+
+#### Example
+
+<Canvas of={Checkbox.Default} /> 
+
+## Usage 
+
+```ts
+import {Checkbox} from "d4-ui/inputs";
+
+const Example = () => {
+  return (
+      <Checkbox
+        label={"Checkbox"}
+        value={true}
+      />
+  );
+};
+
+export default Example; 
+```
+
+#### Arguments 
+
+- **label** _`() => void`_ - A string that represents the text content of the input.
+- **value** - A boolean indicates that it in the value checked inserted in the input.
+- **disabled** - A boolean indicating whether the input should be disabled or not. When disabled, the button cannot be interacted with.
+- **onChange** - A function that is called when the input value is changed.

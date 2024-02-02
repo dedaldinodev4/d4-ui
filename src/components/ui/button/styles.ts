@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 import { ButtonProps } from "./types";
-import { getButtonColors } from "../../utils/colors";
-import { getButtonSize } from "../../utils/sizes";
+import { getButtonColors } from "../../../utils/colors";
+import { getButtonSize } from "../../../utils/sizes";
 
 export const StyledButton = styled.button<ButtonProps>`
+  width: ${(props) => props.fullWidth ? `100%` : `100px`};
   border: ${(props) =>
     props.variant === "outlined" 
       ? `2px solid ${getButtonColors(props.color)}`
